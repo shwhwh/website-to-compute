@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>تم الاختراق</title>
+  <style>
+    body {
+      background-color: black;
+      color: lime;
+      font-family: monospace;
+      font-size: 18px;
+      padding: 20px;
+    }
+    #terminal {
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div id="terminal">جارٍ الاتصال بالجهاز...</div>
+
+  <script>
+    const lines = [
+      "الوصول إلى ملفات النظام...",
+      "تحميل التروجان...",
+      "تشغيل الأداة: DarkRipper.exe",
+      "تم اختراق جهازك بنجاح!",
+      "جميع الملفات الآن تحت سيطرتي يا خوي 😂",
+      "التوقيع: [حمودكا] 😈"
+    ];
+
+    let i = 0;
+    const terminal = document.getElementById("terminal");
+
+    function typeLine() {
+      if (i < lines.length) {
+        terminal.textContent += "\n" + lines[i];
+        i++;
+        setTimeout(typeLine, 1000);
+      }
+    }
+
+    setTimeout(typeLine, 1500);
+  </script>
+</body>
+</html>
